@@ -4,7 +4,8 @@
 angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles',
 	function($scope, $stateParams, $location, Authentication, Articles) {
 		$scope.authentication = Authentication;
-
+		console.log(Articles);
+		
 		// Create new Article
 		$scope.create = function() {
 			// Create new Article object

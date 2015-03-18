@@ -1,0 +1,53 @@
+<section data-ng-controller="FlickerController">
+
+	<h1>Photos</h1>
+<div><h2><span ng-show="text">Results for {{text}}</span></h2></div>
+<div class="row">
+    <div class="col-md-4">
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <label class="sr-only" for="flickr-search">Email address</label>
+                <input class="form-control" id="flickr-search" placeholder="search" ng-model="text">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default" id="flickr-search-button" ng-click="search(text)">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <div>
+    
+    
+    <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages" ng-click="search(text)"></pagination>
+   
+</div>
+
+</div>
+<div class="flickr-photos">
+    <div ng-show="loading"><img src="images/loader.gif"></div>
+    <div ng-hide="loading" class="flickr-photo" ng-repeat="photo in photos"><a ng-href="#/{{photo.id}}"><img ng-src="http://farm{{photo.farm}}.static.flickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_s.jpg"></a></div>
+</div>
+
+<div class="modal photoModal" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" ng-show="currentPhoto">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">{{currentPhoto.title}}</h4>
+            </div>
+            <div class="modal-body">
+            <div class="prev">
+                <a href="" ng-click="selectPhoto(prevPhoto.id)" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                </div>
+                <div class="detailedPhoto">
+                    <img ng-src="{{currentPhotoSrc}}">
+                </div>
+                <div class="next">
+                    <a href="" ng-click="selectPhoto(nextPhoto.id)" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
