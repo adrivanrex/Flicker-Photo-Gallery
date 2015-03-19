@@ -2,6 +2,9 @@
 Flicker Photo search
 
 
+## Flicker-Photo-Search
+- A full-stack application to search Flicker photos by search term.
+
 ## Before You Begin
 Before you begin we recommend you read about the basic building blocks that assemble a MEAN.JS application:
 * MongoDB - Go through [MongoDB Official Website](http://mongodb.org/) and proceed to their [Official Manual](http://docs.mongodb.org/manual/), which should help you understand NoSQL and MongoDB better.
@@ -165,6 +168,5 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 =======
-# Flicker-Photo-Search
-A full-stack application to search Flicker photos by search term.
+
 >>>>>>> a7230d091b3be53fb83f0b524a8bbd66e59d64cc
